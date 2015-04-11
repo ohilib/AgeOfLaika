@@ -16,6 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkT-G9-42q">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="95" width="332" height="22"/>
+                                </variation>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Human Years Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zTD-h4-EfS">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -30,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="179" width="172" height="30"/>
+                                    <rect key="frame" x="16" y="172" width="172" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="ConvertToDogYearsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4aF-AZ-3CN"/>
@@ -42,31 +51,37 @@
                                     <rect key="frame" x="0.0" y="302" width="400" height="298"/>
                                 </variation>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Years" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkT-G9-42q">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDb-v6-DYV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Convert to real Dog Years">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="95" width="332" height="22"/>
+                                    <rect key="frame" x="7" y="210" width="222" height="30"/>
                                 </variation>
-                            </label>
+                                <connections>
+                                    <action selector="ConvertToDogYearsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dau-sv-N8l"/>
+                                    <action selector="convertToRealDogYearsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qoZ-hz-egl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="FkT-G9-42q"/>
                                 <exclude reference="zTD-h4-EfS"/>
                                 <exclude reference="sS4-QR-vRJ"/>
                                 <exclude reference="xR0-Kx-uTo"/>
-                                <exclude reference="FkT-G9-42q"/>
+                                <exclude reference="bDb-v6-DYV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="FkT-G9-42q"/>
                                 <include reference="zTD-h4-EfS"/>
                                 <include reference="sS4-QR-vRJ"/>
                                 <include reference="xR0-Kx-uTo"/>
-                                <include reference="FkT-G9-42q"/>
+                                <include reference="bDb-v6-DYV"/>
                             </mask>
                         </variation>
                     </view>

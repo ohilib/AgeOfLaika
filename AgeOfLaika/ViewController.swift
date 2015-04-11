@@ -32,6 +32,25 @@ class ViewController: UIViewController {
         EnterHumanAgeTextField.resignFirstResponder()
     }
     
+    @IBAction func convertToRealDogYearsButtonPressed(sender: AnyObject) {
+        let stringFromTextField = EnterHumanAgeTextField.text
+        let doubleFromTextField = Double((stringFromTextField as NSString).doubleValue)
+        
+        var realDogYears:Double
+        
+        if doubleFromTextField > 2 {
+            realDogYears = (10.5 * 2) + (doubleFromTextField - 2) * 4
+        }
+        
+        else {
+            realDogYears = doubleFromTextField * 10.5
+        }
+        
+        DogYearsLabel.hidden = false
+        DogYearsLabel.text = "\(realDogYears)" + "Real Human Years"
+        EnterHumanAgeTextField.resignFirstResponder()
+        
+    }
 
 
 }
