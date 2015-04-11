@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         }
         
         DogYearsLabel.hidden = false
-        DogYearsLabel.text = "\(realDogYears)" + "Real Human Years"
+        DogYearsLabel.text = "\(realDogYears)" + " Real Human Years"
         EnterHumanAgeTextField.resignFirstResponder()
         
     }
